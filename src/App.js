@@ -53,7 +53,7 @@ function App() {
               path="/"
               element={
                 <TextForm
-                  heading="Enter text to analyze"
+                  heading="Enter or paste your text here in the textarea"
                   mode={mode}
                   showAlert={showAlert}
                 />

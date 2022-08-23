@@ -24,11 +24,11 @@ export default function TextForm(props) {
   return (
     <>
       <div
-        className="container"
+        className="container row mt-3"
         style={{ color: props.mode === "dark" ? "white" : "black" }}
       >
-        <h1> {props.heading} </h1>
-        <div className="mb-3">
+        <h1 className="text-left"> {props.heading} </h1>
+        <div className="mb-3 col-4 mt-3">
           <textarea
             className="form-control"
             id="myBox"
@@ -40,36 +40,32 @@ export default function TextForm(props) {
             }}
             rows="8"
           ></textarea>
-        </div>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>
+            </div>
+           <div className="col-4 text-left mt-4"><button className="btn btn-info mx-1 my-1 text-white" onClick={handleUpClick}>
           Convert to uppercase
-        </button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleDownClick}>
+        </button><br></br>
+        <button className="btn btn-info mx-1 my-1 text-white" onClick={handleDownClick}>
           Convert to lowercase
-        </button>
-        <button className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>
+        </button><br></br>
+        <button className="btn btn-info mx-1 my-1 text-white" onClick={handleClearClick}>
           Clear text
-        </button>
-      </div>
+        </button></div>
 
       <div
-        className="container"
+        className="container col-4 mt-4"
         style={{ color: props.mode === "dark" ? "white" : "black" }}
       >
-        <h2 className="mt-2">Text details</h2>
-        {/* <p>
-          {text.trim().split(" ").length} words and {text.trim().length}{" "}
-          characters
-        </p> */}
-        {/* <p>{text.split(" ").filter((y) => (y!=="")).length} words and {text.length} characters</p> */}
+        <h4 className="fw-bold"> Text Details : </h4>
 
          <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
-        <h2>Preview</h2>
+        <h4 className="fw-bold">Preview :</h4>
         <p>
           {text.length > 0
             ? text
-            : "Enter something in the textarea above to preview :"}
+            : "Enter something in the textarea to preview :"}
+
         </p>
+      </div>
       </div>
     </>
   );

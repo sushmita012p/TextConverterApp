@@ -1,15 +1,22 @@
 import React from "react";
 
 export default function About(props) {
-
   let myStyle = {
-    color: props.mode ==='dark'?'white':'#042743',
-    backgroundColor : props.mode ==='dark'?'#042743':'white',
-  }
+    color: props.mode === "dark" ? "white" : "#042743",
+    backgroundColor: props.mode === "dark" ? "#042743" : "white",
+  };
 
   return (
-    <div className="container" style={{color: props.mode ==='dark'?'white':'#042743'}}>
-      <h1>About Us</h1>
+    <div
+      className="container"
+      style={{ color: props.mode === "dark" ? "white" : "#042743" }}
+    >
+      <h1 className="text-center mt-2">About Us</h1>
+      <h6>
+        It is a app which makes you ease in analyzing the text.This app aloows
+        you to convert your text into uppercase and lowercase Similarly, this
+        app enables you to see the length of the text you entered.
+      </h6>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
@@ -22,7 +29,7 @@ export default function About(props) {
               aria-controls="collapseOne"
               style={myStyle}
             >
-              <strong>Analyze Text</strong>
+              <strong>Upper Case</strong>
             </button>
           </h2>
           <div
@@ -50,7 +57,7 @@ export default function About(props) {
               aria-controls="collapseTwo"
               style={myStyle}
             >
-             <strong>Reliable to Use</strong>
+              <strong>Lower Case</strong>
             </button>
           </h2>
           <div
@@ -60,7 +67,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed cum
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed cum
               et error quidem doloribus at saepe repellat dolorem architecto
               quia ratione quibusdam veritatis, ipsum minus tempore velit natus
               placeat earum!
@@ -78,7 +85,7 @@ export default function About(props) {
               aria-controls="collapseThree"
               style={myStyle}
             >
-              <strong>Browser Compatibility</strong>
+              <strong>Clear Text</strong>
             </button>
           </h2>
           <div
@@ -88,7 +95,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed cum
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed cum
               et error quidem doloribus at saepe repellat dolorem architecto
               quia ratione quibusdam veritatis, ipsum minus tempore velit natus
               placeat earum!
@@ -98,4 +105,4 @@ export default function About(props) {
       </div>
     </div>
   );
-  }
+}
