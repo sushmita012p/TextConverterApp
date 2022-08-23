@@ -7,8 +7,7 @@ import About from "./components/About";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import FetchNews from "./components/FetchNews";
-
+import HomePage from "./components/HomePage";
 import "./App.css";
 
 function App() {
@@ -47,7 +46,7 @@ function App() {
         <div className="container my-3">
           <Routes>
             <Route exact path="/about" element={<About mode={mode} />}></Route>
-            <Route exact path="/fetchnews" element={<FetchNews mode={mode}/>}></Route>
+            <Route exact path="/homepage" element={<HomePage mode={mode}/>}></Route>
             <Route
               exact
               path="/"

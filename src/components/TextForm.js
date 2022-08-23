@@ -40,32 +40,54 @@ export default function TextForm(props) {
             }}
             rows="8"
           ></textarea>
-            </div>
-           <div className="col-4 text-left mt-4"><button className="btn btn-info mx-1 my-1 text-white" onClick={handleUpClick}>
-          Convert to uppercase
-        </button><br></br>
-        <button className="btn btn-info mx-1 my-1 text-white" onClick={handleDownClick}>
-          Convert to lowercase
-        </button><br></br>
-        <button className="btn btn-info mx-1 my-1 text-white" onClick={handleClearClick}>
-          Clear text
-        </button></div>
+        </div>
+        <div className="col-4 text-left mt-4">
+          <button
+            className="btn btn-info mx-1 my-1 text-white fw-bold"
+          
+            onClick={handleUpClick}
+          >
+            Convert to uppercase
+          </button>
+          <br></br>
+          <button
+            className="btn btn-info mx-1 my-1 text-white fw-bold"
+            
+            onClick={handleDownClick}
+          >
+            Convert to lowercase
+          </button>
+          <br></br>
+          <button
+            className="btn btn-info mx-1 my-1 text-white fw-bold"
+           
+            onClick={handleClearClick}
+          >
+            Clear text
+          </button>
+        </div>
 
-      <div
-        className="container col-4 mt-4"
-        style={{ color: props.mode === "dark" ? "white" : "black" }}
-      >
-        <h4 className="fw-bold"> Text Details : </h4>
+        <div
+          className="container col-4 mt-4"
+          style={{ color: props.mode === "dark" ? "white" : "black" }}
+        >
+          <h4 className="fw-bold"> Text Details : </h4>
 
-         <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
-        <h4 className="fw-bold">Preview :</h4>
-        <p>
-          {text.length > 0
-            ? text
-            : "Enter something in the textarea to preview :"}
-
-        </p>
-      </div>
+          <p>
+            {
+              text.split(" ").filter((element) => {
+                return element.length !== 0;
+              }).length
+            }{" "}
+            words and {text.length} characters
+          </p>
+          <h4 className="fw-bold">Preview :</h4>
+          <p>
+            {text.length > 0
+              ? text
+              : "Enter something in the textarea to preview :"}
+          </p>
+        </div>
       </div>
     </>
   );
