@@ -44,7 +44,6 @@ export default function TextForm(props) {
         <div className="col-4 text-left mt-4">
           <button
             className="btn btn-info mx-1 my-1 text-white fw-bold"
-          
             onClick={handleUpClick}
           >
             Convert to uppercase
@@ -52,7 +51,6 @@ export default function TextForm(props) {
           <br></br>
           <button
             className="btn btn-info mx-1 my-1 text-white fw-bold"
-            
             onClick={handleDownClick}
           >
             Convert to lowercase
@@ -60,7 +58,6 @@ export default function TextForm(props) {
           <br></br>
           <button
             className="btn btn-info mx-1 my-1 text-white fw-bold"
-           
             onClick={handleClearClick}
           >
             Clear text

@@ -46,7 +46,11 @@ function App() {
         <div className="container my-3">
           <Routes>
             <Route exact path="/about" element={<About mode={mode} />}></Route>
-            <Route exact path="/homepage" element={<HomePage mode={mode}/>}></Route>
+            <Route
+              exact
+              path="/homepage"
+              element={<HomePage mode={mode} />}
+            ></Route>
             <Route
               exact
               path="/"
